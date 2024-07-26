@@ -14,13 +14,15 @@ from pathlib import Path
 from datetime import timedelta
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+from decouple import config
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0&(0p+8_dw*e&wgw(5k=@64kl#oz9(pmk*bj1_posvvbx0avad'
+# SECRET_KEY = 'django-insecure-0&(0p+8_dw*e&wgw(5k=@64kl#oz9(pmk*bj1_posvvbx0avad'
+from decouple import config
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -108,11 +110,11 @@ CHANNEL_LAYERS = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'tesseract_db',
+        'NAME': config('DATABASE_NAME'),
         'HOST':'localhost',
         'PORT':'5432',
-        'USER':'postgres',
-        'PASSWORD':'#Saviour99',
+        'USER':config('DATABASE_USER'),
+        'PASSWORD':config('DATABASE_PASSWORD'),
     }
 }
 
@@ -228,5 +230,5 @@ import os
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-RAZOR_KEY_ID ='rzp_test_rpNoCHdMDddYge'
-RAZOR_KEY_SECRET = '9Hg0ZmYMtJ7Yg6IbDHwURN3y'
+RAZOR_KEY_ID =config('RAZOR_KEY_ID')
+RAZOR_KEY_SECRET = config('RAZOR_KEY_SECRET')
