@@ -107,27 +107,27 @@ CHANNEL_LAYERS = {
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': config('DATABASE_NAME'),
-#         'HOST':'localhost',
-#         'PORT':'5432',
-#         'USER':config('DATABASE_USER'),
-#         'PASSWORD':config('DATABASE_PASSWORD'),
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'myproject',
-        'USER': 'myprojectuser',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DATABASE_NAME'),
+        'HOST':'localhost',
+        'PORT':'5432',
+        'USER':config('DATABASE_USER'),
+        'PASSWORD':config('DATABASE_PASSWORD'),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'myproject',
+#         'USER': 'myprojectuser',
+#         'PASSWORD': 'password',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 
 # Password validation
