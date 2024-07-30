@@ -85,6 +85,10 @@ TEMPLATES = [
 ASGI_APPLICATION = 'backend.asgi.application'
 
 
+CORS_ALLOWED_ORIGINS = [
+    'https://master.d1razujtw330ap.amplifyapp.com',
+]
+
 
 # Channel layers
 CHANNEL_LAYERS = {
