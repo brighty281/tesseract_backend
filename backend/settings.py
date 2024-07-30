@@ -85,10 +85,6 @@ TEMPLATES = [
 ASGI_APPLICATION = 'backend.asgi.application'
 
 
-CORS_ALLOWED_ORIGINS = [
-    'https://master.d1razujtw330ap.amplifyapp.com',
-]
-
 
 # Channel layers
 CHANNEL_LAYERS = {
@@ -226,7 +222,7 @@ SIMPLE_JWT = {
 }
 
 
-# CORS_ALLOW_ALL_ORIGINS=True
+CORS_ALLOW_ALL_ORIGINS=True
 
 AUTH_USER_MODEL = 'user_management.User'
 
