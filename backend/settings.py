@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     "corsheaders",
 ]
 
+SITE_ID = 1
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     "corsheaders.middleware.CorsMiddleware",
@@ -118,16 +120,6 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'myproject',
-#         'USER': 'myprojectuser',
-#         'PASSWORD': 'password',
-#         'HOST': 'localhost',
-#         'PORT': '',
-#     }
-# }
 
 
 # Password validation
@@ -244,3 +236,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 RAZOR_KEY_ID =config('RAZOR_KEY_ID')
 RAZOR_KEY_SECRET = config('RAZOR_KEY_SECRET')
+
+
+
+BASE_FRONTEND_URL=config('BASE_FRONTEND_URL')
+GOOGLE_CLIENT_ID=config('GOOGLE_CLIENT_ID')
+GOOGLE_CLIENT_SECRET=config('GOOGLE_CLIENT_SECRET')
+BASE_API_URL=config('BASE_API_URL')

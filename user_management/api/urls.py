@@ -20,5 +20,7 @@ urlpatterns =  [
     path('teacher/login/',TeacherLoginView.as_view(),name="teacher-login"),
     path('teacher/teacher_details/',TeacherDetails.as_view(),name="teacher-details"),
     path('teacher/teacher_documents',TeacherDocuments.as_view(),name='teacher-documents'),
-    path('admin/admin_login/',AdminLoginView.as_view(),name="admin-login")
+    path('admin/admin_login/',AdminLoginView.as_view(),name="admin-login"),
+
+    path("auth/google/", GoogleLoginApi.as_view(), name="login-with-google")
 ]

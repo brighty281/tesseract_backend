@@ -46,8 +46,9 @@ class OtpVerificationSerializer(serializers.Serializer):
     otp=serializers.CharField(max_length=6)
 
 
-
-
+class AuthSerializer(serializers.Serializer):
+    code = serializers.CharField(required=False)
+    error = serializers.CharField(required=False)
 
 
 ########################## teacher serializer #######################
